@@ -1,0 +1,11 @@
+sequelize model:generate --name=user --attributes name:string,email:string,password:string,city:string,state:string,zip:string,cartId:integer,isAdmin:boolean
+
+sequelize model:generate --name=cart --attributes userId:integer
+
+sequelize model:generate --name=item --attributes name:string,description:string,price:integer,type:string,image:string
+
+sequelize model:generate --name=cartItem --attributes cartId:integer,itemId:integer
+
+sequelize model:generate --name=order --attributes userId:integer,date:string,address:string,city:string,state:string,zip:string,total:integer,shipped:boolean
+
+sequelize model:generate --name=orderItem --attributes orderId:integer,itemId:integer
